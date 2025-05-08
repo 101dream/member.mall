@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        //<![CDATA[
+        function clickshow(elem,ID) {
+         var menu = document.getElementById(ID);
+         if (elem.className !='클릭할 객체의 이름') {
+            elem.className = '클릭할 객체의 이름';
+            menu.style.display = "none";
+         } else {
+            elem.className ='opened';
+            menu.style.display ="block";
+        }}
+        //]]>
+    </script>
+    <style>
+        body {
+            font-family: serif;
+        }
+        #main {
+            width: 500px; top: 50%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        div {
+            align-content: center;
+        }
+        .first {
+            margin-bottom: 5px;
+        }
+        .first > h {
+            font-size: 30px;
+        }
+        i > a {
+            text-decoration: none;
+            color: rgb(0, 183, 0)
+        }
+        #contents {
+            font-size: 15px;
+            text-align: right;
+        }
+        #contents > i {
+            line-height: 1.8; /* 기본보다 약간 넓게 */
+        }
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="first">
+            <h><b><우주쇼핑몰></b></h>
+        </div>
+        <div>
+            <h><u>※외계에서 온 멋진 물건※~!!</u></h><br>
+            <h class="goods">>>나는 <i><a href="#"><span id="clickcontents" onclick="clickshow(this,'contents')">물건</span></a></i>을 본다</h>
+        </div>
+        <div id="contents" style="display:none;">
+            <i>
+                <br>
+                <b>물건</b>
+                <br>흡혈 식기 - ₩14,999,999
+                <br>더넓은 무전기 - ₩4,999,999
+                <br>앨리스 피크닉세트 - ₩11,999,999
+                <br>우리가 도움! - ₩66,666,666
+                <br>※할인!※ 은화 뱀 - <span class="red">₩4,999,999</span>
+                <br><del>₩19,999,999</del>
+                <br>
+            </i>
+        </div>
+    </div>
+</body>
+</html>
