@@ -65,6 +65,10 @@
       color: rgb(135, 13, 13);
       font-size: 14px;
     }
+    .notice {
+      font-size: 10px;
+      color: #747474
+    }
   </style>
 </head>
 <body>
@@ -78,6 +82,8 @@
     </div>
     <button onclick="login()">로그인</button>
     <p id="error"></p>
+    <p class="notice">백일몽주식회사 임직원들을 위한 복지몰입니다.<br>
+      임직원 인증코드로 로그인한 고객만 세부 내용을 확인할 수 있습니다.</p>
   </div>
 
   <script>
@@ -90,7 +96,7 @@
 
       if (id === validId && pw === validPw) {
         alert('환영합니다. 이자헌 과장님');
-        window.location.href = 'welcome.html';
+        window.location.href = 'main.html';
       } else {
         alert('아이디 또는 비밀번호가 일치하지 않습니다.');
         document.getElementById('error').innerText = '아이디 또는 비밀번호가 일치하지 않습니다.';
